@@ -1,0 +1,36 @@
+<div
+    focusBack
+    class="modal-overlay"
+    (click)="close()"
+    (keydown.esc)="close()">
+    <div
+        class="modal-content"
+        (click)="$event.stopPropagation()">
+        <div class="modal-title">
+            @if (config.title) {
+                <span>{{ config.title }}</span>
+            }
+            <button (click)="close()">
+                <span class="material-icons">
+                    close
+                </span>
+            </button>
+        </div>
+        
+        <div
+            focusTrap
+            class="modal-body">
+            <ng-content *ngTemplateOutlet="component"></ng-content>
+        </div>
+    
+        <div class="modal-footer">
+            <button (click)="close()">
+                Cancelar
+            </button>
+
+            <button (click)="ok()">
+                Ok
+            </button>
+        </div>
+    </div>
+</div>

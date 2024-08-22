@@ -1,0 +1,51 @@
+<h1>
+    Home
+</h1>
+
+<div style="margin-bottom: 1rem;">
+    <button (click)="openModal(true)">
+        Open Modal 1
+    </button>
+</div>
+
+<div>
+    <button (click)="openModal(false)">
+        Open Modal 2
+    </button>
+</div>
+
+<ng-template #template1>
+    <h2>
+        Modal 1
+    </h2>
+
+    <div style="margin-bottom: 1rem;">
+        <input placeholder="Texto 1">
+    </div>
+
+    <div style="margin-bottom: 1rem;">
+        <input placeholder="Texto 2">
+    </div>
+
+    <div style="margin-bottom: 1rem;">
+        <input placeholder="Texto 3">
+    </div>
+</ng-template>
+
+<ng-template #template2>
+    <h2>
+        Modal 2
+    </h2>
+
+    <div style="margin-bottom: 1rem;">
+        <input placeholder="Texto 1">
+    </div>
+
+    <div style="margin-bottom: 1rem;">
+        <input placeholder="Texto 2">
+    </div>
+
+    <div style="margin-bottom: 1rem;">
+        <input placeholder="Texto 3">
+    </div>
+</ng-template>
