@@ -5,6 +5,9 @@
     (keydown.esc)="close()">
     <div
         class="modal-content"
+        role="dialog"
+        aria-model="true"
+        [attr.aria-label]="config.title"
         (click)="$event.stopPropagation()">
         <div class="modal-title">
             @if (config.title) {
